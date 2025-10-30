@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Online Learning Platform</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: { 'gold': '#b5a47e', 'light-bg': '#f8f8f8' },
+                    fontFamily: { sans: ['Inter', 'sans-serif'] },
+                }
+            }
+        }
+    </script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap');
+        :root { --color-light-bg: #f8f8f8; --color-gold: #b5a47e; }
+        .hero-section-bg { background: linear-gradient(to right, var(--color-light-bg) 50%, #ffffff 50%); }
+        @media (max-width: 1023px) { .hero-section-bg { background: var(--color-light-bg); } }
+        .team-img { transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out; }
+        .team-img:hover { transform: translateY(-5px); box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.2), 0 4px 6px -2px rgba(0, 0, 0, 0.1); }
+    </style>
+    <link rel="stylesheet" href="css.css">
+</head>
+<body class="text-gray-800 font-sans antialiased">
+
+    <!-- Header -->
+    <header class="p-4 flex justify-between items-center bg-white shadow-sm sticky top-0 z-20 border-b border-gray-100">
+        <div class="text-2xl font-bold text-gray-800"><span class="text-gold">CoursePro</span></div>
+        <nav class="hidden md:flex space-x-6 text-sm font-medium">
+            <a href="#" class="hover:text-gold transition">Home</a>
+            <a href="#Landing" class="hover:text-gold transition">Landing</a>
+            <a href="#about" class="hover:text-gold transition">About</a>
+           
+            
+        </nav>
+        <button class="md:hidden p-2 rounded-lg hover:bg-gray-100"><i data-lucide="menu" class="w-6 h-6 text-gray-800"></i></button>
+    </header>
+
+    <!-- 1. Hero Section -->
+    <section id="hero" class="hero-section-bg pb-16">
+        <div class="max-w-7xl mx-auto px-4 pt-16 grid grid-cols-1 lg:grid-cols-2 gap-8 items-center">
+            <div class="p-4 lg:p-0 order-2 lg:order-1">
+                <div class="inline-block px-4 py-2 bg-gold bg-opacity-20 text-gold text-sm font-semibold rounded-full mb-4">Online Courses</div>
+                <h1 class="text-5xl font-extrabold text-gray-900 leading-tight mb-4">Unlock Your Potential with Expert-Led Courses</h1>
+                <p class="text-gray-600 mb-8">Discover hundreds of specialized courses, taught by industry leaders, designed to help you master in-demand skills and accelerate your career. Start learning today!</p>
+                <a href="#skills" class="inline-block px-8 py-4 bg-gray-900 text-white font-semibold rounded-lg hover:bg-gold transition duration-300 transform hover:scale-[1.02] shadow-lg">EXPLORE COURSES</a>
+            </div>
+            <div class="relative min-h-[400px] order-1 lg:order-2">
+                <div class="absolute inset-0 bg-white rounded-xl shadow-xl translate-x-4 translate-y-4 hidden lg:block"></div>
+                <img src="need.webp" alt="Student happily learning online" class="relative z-10 w-full h-full object-cover rounded-xl shadow-2xl">
+            </div>
+        </div>
+    </section>
+
+    <!-- 2. Benefits Section -->
+    <section class="py-16 px-4 bg-white">
+        <div class="max-w-6xl mx-auto">
+            <h2 class="text-3xl font-bold text-center mb-12">We make sure learning is effective and accessible</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-x-12 gap-y-8">
+                <div class="space-y-8">
+                    <div class="flex items-start">
+                        <i data-lucide="graduation-cap" class="w-7 h-7 text-gold mr-4 mt-1 flex-shrink-0"></i>
+                        <div><h3 class="font-bold text-lg mb-1">EXPERIENCED TEACHERS</h3><p class="text-sm text-gray-600">Our instructors are veterans in their fields, bringing real-world insights and practical knowledge directly to your screen.</p></div>
+                    </div>
+                    <div class="flex items-start">
+                        <i data-lucide="zap" class="w-7 h-7 text-gold mr-4 mt-1 flex-shrink-0"></i>
+                        <div><h3 class="font-bold text-lg mb-1">POWERFUL PROGRAMS</h3><p class="text-sm text-gray-600">Structured curricula and cutting-edge content ensure you gain maximum value and job-ready skills quickly.</p></div>
+                    </div>
+                    <div class="flex items-start">
+                        <i data-lucide="user" class="w-7 h-7 text-gold mr-4 mt-1 flex-shrink-0"></i>
+                        <div><h3 class="font-bold text-lg mb-1">PERSONAL MENTORSHIP</h3><p class="text-sm text-gray-600">Get 1-on-1 feedback and guidance from your dedicated teacher to overcome challenges and stay motivated.</p></div>
+                    </div>
+                </div>
+                <div class="space-y-8">
+                    <div class="flex items-start">
+                        <i data-lucide="award" class="w-7 h-7 text-gold mr-4 mt-1 flex-shrink-0"></i>
+                        <div><h3 class="font-bold text-lg mb-1">CERTIFICATION COURSES</h3><p class="text-sm text-gray-600">Earn recognized certifications upon completion, validating your new skills to employers globally.</p></div>
+                    </div>
+                    <div class="flex items-start">
+                        <i data-lucide="briefcase" class="w-7 h-7 text-gold mr-4 mt-1 flex-shrink-0"></i>
+                        <div><h3 class="font-bold text-lg mb-1">INDUSTRY EXPERTS</h3><p class="text-sm text-gray-600">Learn from professionals currently shaping the industry, ensuring your knowledge is always current and relevant.</p></div>
+                    </div>
+                    <div class="flex items-start">
+                        <i data-lucide="headphones" class="w-7 h-7 text-gold mr-4 mt-1 flex-shrink-0"></i>
+                        <div><h3 class="font-bold text-lg mb-1">24/7 SUPPORT</h3><p class="text-sm text-gray-600">Our support team is available around the clock to assist you with technical issues or course content questions.</p></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 3. Skill Upgrade Grid -->
+    <section id="skills" class="py-16 px-4 bg-light-bg">
+        <div class="max-w-6xl mx-auto">
+            <h2 class="text-3xl font-bold text-center mb-4">Upgrade Your Skills with Trending Courses</h2>
+            <p class="text-center text-gray-600 mb-12 max-w-xl mx-auto">Explore our most popular categories, from technical mastery to soft skill development, and find your next step.</p>
+            <div class="grid grid-cols-2 md:grid-cols-3 gap-6">
+                <!-- Card 1-6 using placeholders -->
+                <div class="bg-white rounded-xl shadow-xl overflow-hidden group hover:shadow-2xl transition duration-300 cursor-pointer"><img src="images (1).jpeg" alt="Data Visualization" class="w-full h-40 object-cover transition group-hover:scale-[1.05]"><div class="p-4 text-center"><h3 class="font-semibold text-gray-900">Data Visualization</h3><p class="text-xs text-gray-500 mt-1">Transform data into insights.</p></div></div>
+                <div class="bg-white rounded-xl shadow-xl overflow-hidden group hover:shadow-2xl transition duration-300 cursor-pointer"><img src="images (2).jpeg" alt="Science Laboratory" class="w-full h-40 object-cover transition group-hover:scale-[1.05]"><div class="p-4 text-center"><h3 class="font-semibold text-gray-900">Science Laboratory</h3><p class="text-xs text-gray-500 mt-1">Advanced research techniques.</p></div></div>
+                <div class="bg-white rounded-xl shadow-xl overflow-hidden group hover:shadow-2xl transition duration-300 cursor-pointer"><img src="images (3).jpeg" alt="Business Accounting" class="w-full h-40 object-cover transition group-hover:scale-[1.05]"><div class="p-4 text-center"><h3 class="font-semibold text-gray-900">Business Accounting</h3><p class="text-xs text-gray-500 mt-1">Financial management mastery.</p></div></div>
+                <div class="bg-white rounded-xl shadow-xl overflow-hidden group hover:shadow-2xl transition duration-300 cursor-pointer"><img src="images (4).jpeg" alt="Machine Learning" class="w-full h-40 object-cover transition group-hover:scale-[1.05]"><div class="p-4 text-center"><h3 class="font-semibold text-gray-900">Machine Learning</h3><p class="text-xs text-gray-500 mt-1">The future of AI development.</p></div></div>
+                <div class="bg-white rounded-xl shadow-xl overflow-hidden group hover:shadow-2xl transition duration-300 cursor-pointer"><img src="images (5).jpeg" alt="Personal Development" class="w-full h-40 object-cover transition group-hover:scale-[1.05]"><div class="p-4 text-center"><h3 class="font-semibold text-gray-900">Personal Development</h3><p class="text-xs text-gray-500 mt-1">Boost soft skills and productivity.</p></div></div>
+                <div class="bg-white rounded-xl shadow-xl overflow-hidden group hover:shadow-2xl transition duration-300 cursor-pointer"><img src="images (6).jpeg" alt="Facilities Management" class="w-full h-40 object-cover transition group-hover:scale-[1.05]"><div class="p-4 text-center"><h3 class="font-semibold text-gray-900">Facilities Management</h3><p class="text-xs text-gray-500 mt-1">Optimize operations efficiently.</p></div></div>
+            </div>
+            <div class="text-center mt-12"><a href="#about" class="inline-block px-8 py-4 bg-gray-900 text-white font-semibold rounded-lg hover:bg-gold transition duration-300 transform hover:scale-[1.02] shadow-lg">LEARN MORE</a></div>
+        </div>
+    </section>
+
+    <!-- 4. Build Skills CTA -->
+    <section class="py-16 px-4 bg-white">
+        <div class="max-w-6xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+            <div class="relative min-h-[400px] order-2 lg:order-1">
+                <div class="relative z-10 grid grid-cols-2 gap-4">
+                    <img src="wwewewewe.jpg" alt="Teacher instructing online" class="w-full h-40 object-cover rounded-xl shadow-lg transform translate-y-10">
+                    <img src="jjjj.jpg" alt="Students collaborating" class="w-full h-40 object-cover rounded-xl shadow-lg">
+                    <img src="sdsd.jpg" alt="Student focusing" class="w-full h-40 object-cover rounded-xl shadow-lg">
+                    <img src="bhu.jpeg" alt="Hands on work" class="w-full h-40 object-cover rounded-xl shadow-lg transform -translate-y-10">
+                </div>
+                <div class="absolute inset-0 bg-gold bg-opacity-10 -translate-x-4 translate-y-4 rounded-xl hidden md:block"></div>
+            </div>
+            <div class="order-1 lg:order-2">
+                <h2 class="text-4xl font-extrabold text-gray-900 mb-6">Build New Skills With Us</h2>
+                <p class="text-lg text-gray-600 mb-8">Our platform is built on the philosophy that continuous learning is the key to personal and professional evolution. We connect you with a global network of experts and provide the resources you need to not just keep up, but to lead.</p>
+                <a href="#contact" class="inline-block px-8 py-4 bg-gray-900 text-white font-semibold rounded-lg hover:bg-gold transition duration-300 transform hover:scale-[1.02] shadow-lg">CONTACT US</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- 5. About Us & Split Text -->
+    <section id="about" class="py-16 px-4 bg-light-bg">
+        <div class="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+            <div class="relative min-h-[400px]">
+                <div class="absolute inset-0 bg-gold bg-opacity-20 translate-x-4 -translate-y-4 rounded-xl hidden md:block"></div>
+                <img src="yop.webp" alt="Smiling female student looking at laptop" class="relative z-10 w-full h-full object-cover rounded-xl shadow-2xl">
+                <div class="absolute bottom-0 left-0 lg:-left-10 bg-white p-6 rounded-xl shadow-2xl w-full lg:w-2/3 transform translate-y-1/2">
+                    <h3 class="text-3xl font-bold text-gray-900 mb-4">About Us</h3>
+                    <p class="text-gray-600 mb-4 text-sm">CoursePro was founded to democratize education. We believe high-quality, specialized knowledge should be accessible to everyone, everywhere, helping individuals turn ambition into achievement.</p>
+                    <a href="#" class="font-semibold text-gold hover:text-gray-900 transition text-sm">READ MORE →</a>
+                </div>
+            </div>
+            <div class="pt-20 lg:pt-0">
+                <h2 class="text-4xl font-extrabold text-gray-900 mb-6">Online Study & Trending New Courses</h2>
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                    <div>
+                        <h3 class="font-bold text-xl mb-3">Online Study</h3>
+                        <p class="text-gray-600 text-sm">In dictum non consectetur a erat nam at. Turpis egestas maecenas pharetra convallis posuere morbi. Scelerisque purus semper eget duis. Dui id ornare pharetra.</p>
+                    </div>
+                    <div>
+                        <h3 class="font-bold text-xl mb-3">Trending New Courses</h3>
+                        <p class="text-gray-600 text-sm">Feugiat nisl pretium fusce id. In ornare quam viverra orci sagittis. Amet commodo nulla facilisi nullam vehicula ipsum.</p>
+                        <a href="#skills" class="inline-block px-6 py-3 mt-4 bg-gray-900 text-white font-semibold rounded-lg hover:bg-gold transition text-xs shadow-md">LEARN MORE</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 6. Team & Testimonials -->
+    <section id="team" class="py-24 px-4 bg-white">
+        <div class="max-w-6xl mx-auto">
+            <h2 class="text-3xl font-bold text-center mb-12">Our Amazing Team</h2>
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-8 text-center">
+                <div class="flex flex-col items-center"><img src="images (8).jpeg" alt="Nat Reynolds" class="team-img w-36 h-36 rounded-full object-cover mb-4 shadow-lg border-4 border-white"><h4 class="font-bold text-lg text-gray-900">Nat Reynolds</h4><p class="text-sm text-gold">Worldwide Partner</p></div>
+                <div class="flex flex-col items-center"><img src="images (9).jpeg" alt="Monica Pauli" class="team-img w-36 h-36 rounded-full object-cover mb-4 shadow-lg border-4 border-white"><h4 class="font-bold text-lg text-gray-900">Monica Pauli</h4><p class="text-sm text-gold">Creative Leader</p></div>
+                <div class="flex flex-col items-center"><img src="oiii.jpg" alt="Jennie Roberts" class="team-img w-36 h-36 rounded-full object-cover mb-4 shadow-lg border-4 border-white"><h4 class="font-bold text-lg text-gray-900">Jennie Roberts</h4><p class="text-sm text-gold">Teacher</p></div>
+                <div class="flex flex-col items-center"><img src="images (10).jpeg" alt="Mila Parker" class="team-img w-36 h-36 rounded-full object-cover mb-4 shadow-lg border-4 border-white"><h4 class="font-bold text-lg text-gray-900">Mila Parker</h4><p class="text-sm text-gold">Teacher</p></div>
+            </div>
+            <div class="mt-20">
+                <h2 class="text-3xl font-bold text-center mb-12">Read what our customers say</h2>
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                    <div class="bg-light-bg p-8 rounded-xl shadow-lg relative"><div class="absolute top-0 left-0 w-4 h-full bg-gold rounded-l-xl opacity-30"></div><p class="text-gray-700 italic mb-4">"Proin sed libero enim sed faucibus turpis. Proin sed libero enim sed faucibus turpis in eu mi. Proin sed libero enim sed faucibus turpis in eu mi. Proin sed libero enim sed faucibus turpis in eu mi."</p><div class="flex items-center"><img src="https://placehold.co/50x50/333333/ffffff?text=CA" alt="Client Avatar" class="w-12 h-12 rounded-full object-cover mr-3"><div><p class="font-bold text-gray-900">Celio Almeida</p><p class="text-xs text-gold">Designer</p></div></div></div>
+                    <div class="bg-light-bg p-8 rounded-xl shadow-lg relative"><div class="absolute top-0 right-0 w-4 h-full bg-gold rounded-r-xl opacity-30"></div><p class="text-gray-700 italic mb-4">"Proin sed libero enim sed faucibus turpis. Proin sed libero enim sed faucibus turpis in eu mi. Proin sed libero enim sed faucibus turpis in eu mi. Proin sed libero enim sed faucibus turpis in eu mi."</p><div class="flex items-center justify-end"><div><p class="font-bold text-gray-900 text-right">Frank Maney</p><p class="text-xs text-gold text-right">Engineer</p></div><img src="https://placehold.co/50x50/333333/ffffff?text=FM" alt="Client Avatar" class="w-12 h-12 rounded-full object-cover ml-3"></div></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 7. Key Metrics / Facts Section -->
+    <section id="metrics" class="py-16 px-4 bg-white">
+        <div class="max-w-6xl mx-auto">
+            <h2 class="text-3xl font-bold text-center mb-12">Numbers that speak volumes about our commitment</h2>
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-8 text-center">
+                <div class="p-4 rounded-xl"><p class="text-5xl font-extrabold text-gold mb-2">17</p><p class="text-sm font-semibold text-gray-600">AWARDS WON</p></div>
+                <div class="p-4 rounded-xl"><p class="text-5xl font-extrabold text-gold mb-2">700</p><p class="text-sm font-semibold text-gray-600">STUDENTS</p></div>
+                <div class="p-4 rounded-xl"><p class="text-5xl font-extrabold text-gold mb-2">108</p><p class="text-sm font-semibold text-gray-600">COURSES</p></div>
+                <div class="p-4 rounded-xl"><p class="text-5xl font-extrabold text-gold mb-2">78</p><p class="text-sm font-semibold text-gray-600">TEAM MEMBERS</p></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 8. Online Learning CTA -->
+    <section class="py-16 px-4 bg-light-bg">
+        <div class="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+            <div class="relative min-h-[400px]">
+                <img src="images.jpeg" alt="Student wearing headphones" class="w-full h-full object-cover rounded-xl shadow-2xl">
+            </div>
+            <div class="p-4 lg:p-0">
+                <h2 class="text-4xl font-extrabold text-gray-900 mb-6">Online learning designed for success</h2>
+                <p class="text-gray-600 mb-8">Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+                <a href="#skills" class="inline-block px-8 py-4 bg-gray-900 text-white font-semibold rounded-lg hover:bg-gold transition duration-300 transform hover:scale-[1.02] shadow-lg">LEARN MORE</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- 9. Footer Section -->
+    <footer id="contact" class="bg-light-bg pt-16 pb-8 px-4">
+        <div class="max-w-6xl mx-auto">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl font-bold text-gray-900 mb-4">Get our free newsletter</h2>
+                <p class="text-gray-600 max-w-lg mx-auto mb-8">Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit.</p>
+                <form class="flex flex-col sm:flex-row justify-center space-y-4 sm:space-y-0 sm:space-x-4">
+                    <input type="email" placeholder="Enter a valid email address" class="px-6 py-3 border border-gray-300 rounded-lg w-full sm:w-80 focus:ring-gold focus:border-gold transition" aria-label="Email address for newsletter">
+                    <button type="submit" class="px-8 py-3 bg-gold text-white font-semibold rounded-lg hover:bg-gray-900 transition shadow-md">SUBMIT</button>
+                </form>
+            </div>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8 text-center md:text-left border-t border-b border-gray-300 py-10">
+                <div><h4 class="font-bold text-lg mb-2">Location:</h4><address class="text-gray-600 not-italic">45 Pirama Rd,<br>Pyrmont NSW 2022</address></div>
+                <div><h4 class="font-bold text-lg mb-2">Contacts:</h4><p class="text-gray-600">info@courses.com</p><p class="text-gray-600">(123) 123-1234</p></div>
+                <div><h4 class="font-bold text-lg mb-2">Follow us:</h4><div class="flex justify-center md:justify-start space-x-4"><a href="#" class="text-gray-600 hover:text-gold transition" aria-label="Follow us on Facebook">Facebook</a><a href="#" class="text-gray-600 hover:text-gold transition" aria-label="Follow us on Instagram">Instagram</a></div></div>
+            </div>
+            <div class="mt-10 mb-4 rounded-xl overflow-hidden shadow-xl border border-gray-200">
+                <img src="images (11).jpeg" alt="Map of New York area" class="w-full h-auto object-cover">
+            </div>
+            <div class="text-center text-sm text-gray-500 pt-4 border-t border-gray-200">&copy; 2025 CoursePro. All rights reserved.</div>
+        </div>
+    </footer>
+
+    <!-- JavaScript to render Lucide Icons -->
+    <script>window.onload = function() { lucide.createIcons(); };</script>
+</body>
+</html>

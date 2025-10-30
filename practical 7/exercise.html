@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Responsive Tailwind Layout</title>
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-gray-100 text-gray-800 flex flex-col min-h-screen">
+
+  <!-- Header -->
+  <header class="bg-blue-600 text-white p-4 shadow-md">
+    <div class="container mx-auto flex justify-between items-center">
+      <h1 class="text-2xl font-bold">My Website</h1>
+      <nav class="space-x-4">
+        <a href="#" class="hover:text-yellow-300">Home</a>
+        <a href="#" class="hover:text-yellow-300">About</a>
+        <a href="#" class="hover:text-yellow-300">Contact</a>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Main Content -->
+  <main class="flex-grow container mx-auto p-6 text-center">
+    <h2 class="text-3xl font-semibold mb-4">Welcome to My Website</h2>
+    <p class="mb-6 text-gray-700 max-w-xl mx-auto">
+      This layout is built using TailwindCSS. Resize the screen to see how the layout adapts!
+    </p>
+
+    <!-- Micro Interaction: Hover Button -->
+    <button class="bg-blue-600 text-white px-6 py-3 rounded-lg shadow-md 
+                   hover:bg-blue-700 hover:scale-105 transition-transform duration-300">
+      Hover Me!
+    </button>
+
+    <!-- Responsive Example -->
+    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 mt-10">
+      <div class="bg-white p-4 rounded-lg shadow hover:shadow-lg transition">
+        <h3 class="font-bold text-lg">Card 1</h3>
+        <p class="text-sm text-gray-600 mt-2">Responsive card example.</p>
+      </div>
+      <div class="bg-white p-4 rounded-lg shadow hover:shadow-lg transition">
+        <h3 class="font-bold text-lg">Card 2</h3>
+        <p class="text-sm text-gray-600 mt-2">Resize the screen to test!</p>
+      </div>
+      <div class="bg-white p-4 rounded-lg shadow hover:shadow-lg transition">
+        <h3 class="font-bold text-lg">Card 3</h3>
+        <p class="text-sm text-gray-600 mt-2">Looks great on any device!</p>
+      </div>
+    </div>
+  </main>
+
+  <!-- Footer -->
+  <footer class="bg-gray-800 text-gray-200 py-4 text-center mt-8">
+    <p>&copy; 2025 My Website | All Rights Reserved</p>
+  </footer>
+
+</body>
+</html>

@@ -1,0 +1,56 @@
+<!-- Load Tailwind CSS CDN (REQUIRED for all utility classes to work) -->
+<script src="https://cdn.tailwindcss.com"></script>
+<!-- Load Lucide Icons CDN (REQUIRED for icons to display) -->
+<script src="https://unpkg.com/lucide@latest"></script>
+
+<!-- 1. Tailwind Configuration Script: Defines custom colors and font -->
+<script>
+    tailwind.config = {
+        theme: {
+            extend: {
+                colors: { 
+                    'gold': '#b5a47e', 
+                    'light-bg': '#f8f8f8' 
+                },
+                fontFamily: { 
+                    sans: ['Inter', 'sans-serif'] 
+                },
+            }
+        }
+    }
+</script>
+<!-- 2. Custom CSS Block: For non-Tailwind specific visual effects -->
+<style>
+    /* Import the Inter font for use */
+    @import url('https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap');
+    
+    /* * Hero Section Background Split: Creates the half-light-gray, half-white background 
+     * effect on large screens (lg breakpoint and up). 
+     */
+    .hero-section-bg { 
+        background: linear-gradient(to right, #f8f8f8 50%, #ffffff 50%); 
+    }
+
+    /* Mobile Adjustment: Sets the hero background to solid light-gray on smaller screens */
+    @media (max-width: 1023px) { 
+        .hero-section-bg { 
+            background: #f8f8f8; 
+        } 
+    }
+
+    /* Team Image Hover Effect (used in Section 6) */
+    .team-img { 
+        transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out; 
+    }
+
+    .team-img:hover { 
+        transform: translateY(-5px); /* Lifts the image */
+        /* Adds a subtle shadow for depth */
+        box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.2), 0 4px 6px -2px rgba(0, 0, 0, 0.1); 
+    }
+
+    /* Smooth Scrolling for anchor links (e.g., in the header navigation) */
+    html {
+        scroll-behavior: smooth;
+    }
+</style>
