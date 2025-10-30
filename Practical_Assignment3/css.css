@@ -11,15 +11,15 @@
                 colors: { 
                     'gold': '#b5a47e', 
                     'light-bg': '#f8f8f8' 
-                },
+                }
                 fontFamily: { 
                     sans: ['Inter', 'sans-serif'] 
-                },
+                }
             }
         }
     }
 </script>
-<!-- 2. Custom CSS Block: For non-Tailwind specific visual effects -->
+
 <style>
     /* Import the Inter font for use */
     @import url('https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap');
